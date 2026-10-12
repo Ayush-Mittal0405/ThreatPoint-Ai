@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aegisx-agent"
+version = "0.1.0"
+description = "AegisX endpoint agent — secure Windows-first security telemetry collector"
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.31.0",
+    "psutil>=5.9.0",
+    "PyYAML>=6.0",
+]
+
+[project.scripts]
+aegisx-agent = "aegisx_agent.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

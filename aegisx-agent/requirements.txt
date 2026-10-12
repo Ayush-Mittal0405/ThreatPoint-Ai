@@ -1,0 +1,7 @@
+# AegisX endpoint agent runtime dependencies
+requests>=2.31.0
+psutil>=5.9.0
+PyYAML>=6.0
+
+# Test-only
+pytest>=8.0.0

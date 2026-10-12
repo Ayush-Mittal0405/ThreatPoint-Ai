@@ -1,0 +1,15 @@
+apiVersion: v2
+name: aegisx
+description: AegisX — Agentic AI Autonomous SOC and Extended Detection & Response (XDR) Platform
+type: application
+version: 0.1.0
+appVersion: "0.2.0"
+keywords:
+  - security
+  - soc
+  - xdr
+  - ai-agent
+  - mitre-attack
+  - incident-response
+maintainers:
+  - name: AegisX Security Team

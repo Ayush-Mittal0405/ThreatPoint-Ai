@@ -1,0 +1,11 @@
+{
+  "dataset_name": "AegisX-SOC-Combined",
+  "format": "chatml",
+  "generated_at": "2026-09-08T20:27:43.797731+00:00",
+  "total_samples": 8100,
+  "splits": {
+    "train": 6480,
+    "val": 810,
+    "test": 810
+  }
+}

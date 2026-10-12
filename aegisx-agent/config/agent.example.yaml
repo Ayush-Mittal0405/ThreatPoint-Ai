@@ -1,0 +1,44 @@
+# ============================================================
+# AegisX endpoint agent configuration — copy to agent.yaml and edit.
+# The enrollment token and the per-agent credential are secrets:
+#  - Never commit a real token to source control.
+#  - The credential returned at enrollment is stored separately in the state
+#    directory (agent_state.json), not in this file.
+# ============================================================
+
+server:
+  # Base URL of the AegisX server. HTTPS is required for non-local servers.
+  url: "https://aegisx.example.com:8008"
+  # Verify the server's TLS certificate (recommended). Set false ONLY for a
+  # throwaway local demo, or point ca_cert at your internal CA bundle instead.
+  verify_tls: true
+  # Optional path to a CA bundle for a self-signed / internal-CA server.
+  ca_cert: ""
+  timeout_seconds: 15
+
+agent:
+  heartbeat_interval_seconds: 2
+  collect_interval_seconds: 1
+  flush_interval_seconds: 1
+  batch_size: 100
+  buffer_max_events: 10000        # bounded — oldest events dropped when full
+  report_username: false          # privacy: only send the logged-in username if true
+  max_backoff_seconds: 300
+
+collectors:
+  process: true
+  network: true
+  authentication: true            # Windows Security logon/logoff/lockout events
+  persistence: true               # registry Run keys + scheduled tasks (Windows)
+  eventlog: true
+
+# One-time enrollment token issued by the SOC admin
+# (POST /api/v1/endpoints/enroll-tokens). Consumed once, then cleared.
+# Prefer supplying this via the AEGISX_AGENT_ENROLLMENT_TOKEN environment
+# variable at install time rather than storing it here.
+enrollment:
+  token: ""
+
+# Where the agent stores its identity, credential, buffer, and logs.
+# Defaults to %PROGRAMDATA%\AegisX\agent on Windows.
+state_dir: ""

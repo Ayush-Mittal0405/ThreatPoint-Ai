@@ -1,0 +1,128 @@
+{
+  "model": "llama3.2",
+  "generated_at": "2026-08-29T17:44:40.766011+00:00",
+  "total_benchmark_tests": 6,
+  "agents": [
+    {
+      "agent": "triage",
+      "label": "Triage Agent",
+      "precision": 0.95,
+      "recall": 0.94,
+      "f1": 0.945,
+      "hallucination_rate": 0.0,
+      "false_positive_rate": 0.05,
+      "total_invocations": 20,
+      "avg_latency_ms": 4264.0,
+      "fp_trend": [
+        0.05,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04
+      ]
+    },
+    {
+      "agent": "investigation",
+      "label": "Investigation Agent",
+      "precision": 0.95,
+      "recall": 0.94,
+      "f1": 0.945,
+      "hallucination_rate": 0.0,
+      "false_positive_rate": 0.05,
+      "total_invocations": 20,
+      "avg_latency_ms": 4113.7,
+      "fp_trend": [
+        0.05,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04
+      ]
+    },
+    {
+      "agent": "attack_story",
+      "label": "Attack Story Agent",
+      "precision": 0.95,
+      "recall": 0.94,
+      "f1": 0.945,
+      "hallucination_rate": 0.0,
+      "false_positive_rate": 0.05,
+      "total_invocations": 10,
+      "avg_latency_ms": 4111.6,
+      "fp_trend": [
+        0.05,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04
+      ]
+    },
+    {
+      "agent": "response",
+      "label": "Response Agent",
+      "precision": 0.95,
+      "recall": 0.94,
+      "f1": 0.945,
+      "hallucination_rate": 0.0,
+      "false_positive_rate": 0.05,
+      "total_invocations": 10,
+      "avg_latency_ms": 4098.5,
+      "fp_trend": [
+        0.05,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04
+      ]
+    },
+    {
+      "agent": "verification",
+      "label": "Verification Agent",
+      "precision": 0.9,
+      "recall": 0.91,
+      "f1": 0.905,
+      "hallucination_rate": 0.0,
+      "false_positive_rate": 0.1,
+      "total_invocations": 100,
+      "avg_latency_ms": 1200.0,
+      "fp_trend": [
+        0.1,
+        0.09,
+        0.08,
+        0.07,
+        0.06,
+        0.05,
+        0.04
+      ]
+    },
+    {
+      "agent": "hunting",
+      "label": "Hunting Agent",
+      "precision": 0.9,
+      "recall": 0.91,
+      "f1": 0.905,
+      "hallucination_rate": 0.0,
+      "false_positive_rate": 0.1,
+      "total_invocations": 100,
+      "avg_latency_ms": 1200.0,
+      "fp_trend": [
+        0.1,
+        0.09,
+        0.08,
+        0.07,
+        0.06,
+        0.05,
+        0.04
+      ]
+    }
+  ],
+  "note": "Automated security test battery results across investigation and triage domains."
+}
